@@ -14,8 +14,8 @@ This is a collection of my notes from different things I've learnt while program
 * #### General
 
 * #### Frameworks and Libraries
-  - #### React
-  - ##### Redux
+  * #### React
+  * ##### Redux
 
 * #### Patterns
 
