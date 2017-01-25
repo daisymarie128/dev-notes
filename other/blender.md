@@ -13,4 +13,4 @@ With the things you want to cut away from the current model and put into a new o
 
 > Remember to be in edit mode of your object to select faces, vertices or edges
 
-[useful link](#http://blender.stackexchange.com/questions/6184/splitting-pieces-of-a-mesh-into-a-new-object)
+[useful link](http://blender.stackexchange.com/questions/6184/splitting-pieces-of-a-mesh-into-a-new-object)
