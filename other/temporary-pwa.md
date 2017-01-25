@@ -4,7 +4,7 @@ This course usually goes for three days, however we attended the course for two 
 
 ## Contents
 [Introduction to Progressive Web Apps](#introduction-to-progressive-web-apps)
-[New techniques for responsive design (with lab)](#)
+[New techniques for responsive design (with lab)](#New techniques for responsive design)
 [Working with Responsive Images (with lab)](#)
 [Introduction to Service Workers](#)
 [Adding offline support for an existing content site (with lab)](#)
@@ -23,3 +23,6 @@ By definintion Progressive Web Apps are user experiences that have the reach of 
 - **Engaging** - Feel like a natural app on the device, with an immersive user experience.
 
 This new level of of quality allows Progressive Web Apps to earn a place on the user's home screen.
+
+
+## New techniques for responsive design
