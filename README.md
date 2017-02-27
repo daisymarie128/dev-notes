@@ -27,7 +27,7 @@ This is a collection of my notes from different things I've learnt while program
 - [scrolling](js/general/scrolling.md)
 
 ### Patterns
-- [scrolling](js/patterns/iife.md)
+- [IIFE](js/patterns/iife.md)
 
 
 
