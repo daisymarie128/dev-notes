@@ -3,31 +3,33 @@ This is a collection of my notes from different things I've learnt while program
 
 ## CATEGORIES
 - [Javascript](#javascript)
-  - [Frameworks / Libraries](#frameworks-/-libraries)
-    - [React](#React)
-    - [Redux](#Redux)
 - [CSS](#CSS)
-  - [General](#general)
-  - [Mobile](#mobile)
+- [GIT](#GIT)
 - [HTML](#HTML)
 - [NPM](#npm)
-- [Other](#Other)
+- [UNITY](#unity)
+- [Other](#other)
 
 
 ## Javascript
 
 ### Frameworks / Libraries
-
-#### General
-- [scrolling](js/general/scrolling.md)
-
 #### React
-- [components](js/fameworks-libraries/react/components.md)
-- [refs](js/fameworks-libraries/react/refs.md)
+- [Components](js/frameworks-libraries/react/components.md)
+- [Refs](js/frameworks-libraries/react/refs.md)
+- [Stateless Functions](js/frameworks-libraries/react/stateless-functions.md)
 
 #### Redux
-- [general notes](js/fameworks-libraries/redux/general-notes.md)
-- [reducer](js/fameworks-libraries/redux/reducer.md)
+- [General Notes](js/frameworks-libraries/redux/general-notes.md)
+- [Reducer](js/frameworks-libraries/redux/reducer.md)
+
+### General
+- [scrolling](js/general/scrolling.md)
+
+### Patterns
+- [scrolling](js/patterns/iife.md)
+
+
 
 ## CSS
 ### General
@@ -35,10 +37,20 @@ This is a collection of my notes from different things I've learnt while program
 ### Mobile
 - [mobile tap color](css/mobile/mobile-tap-color.md)
 - [scrolling](css/mobile/scrolling.md)
+- [visibility](css/mobile/visibility.md)
+
+## GIT
+- [commands](git/commands.md)
 
 ## HTML
+
+## Unity
+- [AR basics](unity/AR/basics.md)
+
 
 ## NPM
 - [commands](npm/commands.md)
 
 ## Other
+- [blender](other/blender.md)
+- [pwa temp](other/temporary-pwa.md)
