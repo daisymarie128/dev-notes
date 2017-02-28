@@ -66,7 +66,7 @@ Geo-fencing (proposed)
 
 ***Example of how to register your service worker***
 
-```
+```javascript
 
 navigator.serviceWorker.register('service-worker.js').then(function(registration) {
   console.log('registered!', registration)
@@ -77,7 +77,7 @@ It is important to put this file in the root of your site, so that it can act on
 
 It's also important to wrap this with a check to see if the browser supports service workers, currently ios doesn't.
 
-```
+```javascript
 if ('serviceWorker' in navigator) {
 
 }
@@ -100,7 +100,7 @@ You need to specify the name of the cache you want to use. This usually includes
 The method will return a promise, which resolves to the cache object. You can use this cache object to add the files you want to cache. The `addAll` method takes in an array of URLs, retrieves them, and adds the responses to the cache.
 
 It's good to wrap the cache call with a Promise that resolves when everything you want to do in the install event is done. If not, the worker will be marked as installed and will be activated before it is ready. To do this put the caches.open chain into event.waitUntil:
-```
+```javascript
 self.addEventListener('install', event => {
   console.log('installed!', event);
   event.waitUntil(
@@ -118,7 +118,7 @@ You should see that all the files in URLs list are in the CACHE_NAME (whatever y
 
 ***Example of event handlers***
 
-```
+```javascript
 self.addEventListener('install', event => {
   console.log('installed!', event);
 });
