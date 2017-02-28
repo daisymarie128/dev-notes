@@ -3,18 +3,18 @@ This was a training session provided by Google Developers to teach companies how
 This course usually goes for three days, however we attended the course for two days. Where they covered a range of different topics, about how to think and structure building progressive web apps and how to also implement these techniques. The workshops were 40% hands on lab exercises.
 
 ## Contents
-[Introduction to Progressive Web Apps](#introduction-to-progressive-web-apps)<br>
-[New techniques for responsive design (with lab)](#New techniques for responsive design)<br>
-[Working with Responsive Images (with lab)](#)<br>
-[Introduction to Service Workers](#introduction-to-service-workers)<br>
-[Adding offline support for an existing content site (with lab)](#)<br>
-[Designing PWA support for dynamic sites & web apps](#)<br>
-[Auditing an existing site with Lighthouse (with lab)](#lighthouse)<br>
-[Using sw-toolbox and sw-precache to automate Service Worker creation (with lab)](#)<br>
-[Deeper dive into core technologies (Promises, Fetch API, Cache API)](#)<br>
-[Working with Indexed DB (with lab)](#)<br>
-[Building apps that cache live data in the service worker](#)<br>
-[Discoverability & Analytics](#)<br>
+- [x] [Introduction to Progressive Web Apps](#introduction-to-progressive-web-apps)<br>
+- [ ] [New techniques for responsive design (with lab)](#New techniques for responsive design)<br>
+- [ ] [Working with Responsive Images (with lab)](#)<br>
+- [x] [Introduction to Service Workers](#introduction-to-service-workers)<br>
+- [ ] [Adding offline support for an existing content site (with lab)](#)<br>
+- [ ] [Designing PWA support for dynamic sites & web apps](#)<br>
+- [x] [Auditing an existing site with Lighthouse (with lab)](#lighthouse)<br>
+- [ ] [Using sw-toolbox and sw-precache to automate Service Worker creation (with lab)](#)<br>
+- [x] [Deeper dive into core technologies (Promises, Fetch API, Cache API)](#)<br>
+- [ ] [Working with Indexed DB (with lab)](#)<br>
+- [ ] [Building apps that cache live data in the service worker](#)<br>
+- [ ] [Discoverability & Analytics](#)<br>
 
 ## Introduction to Progressive Web Apps
 By definintion Progressive Web Apps are user experiences that have the reach of the web, and are:
