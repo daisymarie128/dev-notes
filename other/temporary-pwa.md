@@ -64,6 +64,7 @@ Push notifications<br>
 Background sync (proposed)<br>
 Geo-fencing (proposed)
 
+#### Registering
 ***Example of how to register your service worker***
 
 ```javascript
@@ -72,49 +73,6 @@ navigator.serviceWorker.register('service-worker.js').then(function(registration
   console.log('registered!', registration)
 });
 ```
-
-It is important to put this file in the root of your site, so that it can act on any requests to your domain. For example if you put it in `/js/service-worker.js` then it would only be able to act on requests mad to `/js`
-
-It's also important to wrap this with a check to see if the browser supports service workers, currently ios doesn't.
-
-```javascript
-if ('serviceWorker' in navigator) {
-
-}
-```
-
-**How to test if your service worker is there:**<br>
-In Chrome you can do this by<br>
-<span style="color:#745ABD">***opening DevTools -> Click on "Application" -> Check for registered ServiceWorker***.</span><br>
-You should be able to find `service-worker.js` (or whatever you named your file).
-
-
-After you've registered the service worker, the browser will now install it and activate it. <br>
-The script will be installed in the user’s browser and it will live there even after the user has left your site.
-
-When it's installed ***see the event handler below***, is when you should begin to cache your files.<br>
-The cache can be accessed by: `caches.open(CACHE_NAME)`
-
-You need to specify the name of the cache you want to use. This usually includes the version number, so you can use a new cache for the updated resources when you release a new version.
-
-The method will return a promise, which resolves to the cache object. You can use this cache object to add the files you want to cache. The `addAll` method takes in an array of URLs, retrieves them, and adds the responses to the cache.
-
-It's good to wrap the cache call with a Promise that resolves when everything you want to do in the install event is done. If not, the worker will be marked as installed and will be activated before it is ready. To do this put the caches.open chain into event.waitUntil:
-```javascript
-self.addEventListener('install', event => {
-  console.log('installed!', event);
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-    .then(function (cache) {
-      //...
-    })
-  );
-});
-```
-
-**How to test if your files are cached**<br>
-<span style="color:#745ABD">***Open up DevTools -> Application tab -> Cache Storage***</span><br>
-You should see that all the files in URLs list are in the CACHE_NAME (whatever you named it) cache.
 
 ***Example of event handlers***
 
@@ -131,3 +89,131 @@ self.addEventListener('fetch', event => {
   console.log('fetched!', event.request.url, event);
 });
 ```
+
+It is important to put this file in the root of your site, so that it can act on any requests to your domain. For example if you put it in `/js/service-worker.js` then it would only be able to act on requests mad to `/js`
+
+It's also important to wrap this with a check to see if the browser supports service workers, currently ios doesn't.
+
+```javascript
+if ('serviceWorker' in navigator) {
+
+}
+```
+
+**How to test if your service worker is there:**<br>
+In Chrome you can do this by<br>
+***opening DevTools -> Click on "Application" -> Check for registered ServiceWorker***.<br>
+You should be able to find `service-worker.js` (or whatever you named your file).
+
+#### Installing
+After you've registered the service worker, the browser will now install it and activate it. <br>
+The script will be installed in the user’s browser and it will live there even after the user has left your site.
+
+When it's installed ***see the event handler above***, is when you should begin to cache your files.<br>
+The cache can be accessed by: `caches.open(CACHE_NAME)`
+
+You need to specify the name of the cache you want to use. This usually includes the version number, so you can use a new cache for the updated resources when you release a new version.
+
+The method will return a promise, which resolves to the cache object. You can use this cache object to add the files you want to cache. The `addAll` method takes in an array of URLs, retrieves them, and adds the responses to the cache.
+
+It's good to wrap the cache call with a Promise that resolves when everything you want to do in the install event is done. If not, the worker will be marked as installed and will be activated before it is ready. To do this put the `caches.open` chain into `event.waitUntil`:
+```javascript
+self.addEventListener('install', event => {
+  console.log('installed!', event);
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+    .then(function (cache) {
+      //...
+    })
+  );
+});
+```
+
+**How to test if your files are cached**<br>
+In Chrome DevTools:<br>
+***Open up DevTools -> Application tab -> CacheStorage***
+
+You should see that all the files in URLs list are in the CACHE_NAME (whatever you named it) cache.
+
+#### Caching an Return requests
+Even though you've now cached our files, you now need to tell your application to use them when a user comes back to your site. To do this we need to use the `fetch event`. This is what you will call to fetch the files you have just cached.
+
+The fetch event makes it possible to intercept every HTTP request the browser does from the page where you attached the ServiceWorker.<br>
+`fetch()` is a built in function for doing network requests. It is able to take another request and perform it.
+
+What you want to do, is be able to look at your cache and check if the files are already cached and then return them. – you use `caches.match` to check this.<br>
+`caches.match` will check all the caches for a file with the given URL. It returns a Promise with the response from the cache. If the cache contains what you are looking for it will be a response object.<br>
+And if there is no file in the cache, you simply clone the original request and send it to fetch. Then, you return the Promise that you get from fetch.
+
+***Example of a fetch request***
+
+```javascript
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request)
+      .then(function(response) {
+        // Cache hit - return response
+        if (response) {
+          return response;
+        }
+
+        // Clone the request. A request is a stream and
+        // can only be consumed once.
+        // You are consuming this by cache and once by the browser
+        // for fetch. - this is why we need to clone.
+        var fetchRequest = event.request.clone();
+
+        return fetch(fetchRequest).then(
+          function(response) {
+            // Check if we received a valid response
+            if(!response || response.status !== 200 || response.type !== 'basic') {
+              return response;
+            }
+
+            var responseToCache = response.clone();
+            caches.open(CACHE_NAME)
+              .then(function(cache) {
+                cache.put(event.request, responseToCache);
+              });
+
+            return response;
+          }
+        );
+      })
+    );
+});
+```
+**How to test your site offline**<br>
+***open DevTools -> Click on "Application" -> Service Workers***<br>
+Then toggle the offline checkbox.<br>
+<img src="../assets/pwa/testing-offline.png" width="300px"/>
+
+#### Updating
+At some stage your service worker will need to be updated.<br>
+If you've updated your service worker file the browser now considers this to be new and will redownload it. Your service worked will be started and the install event will be fired.<br>
+However at this stage the old service worker is still controlling the he current pages so the new service worker will enter a waiting state.<br>
+Only after the currently open pages of your site are closed, will your new service worker take control and your older version be killed. After that then the new activate event will be fired.
+
+The activate function usually has a task that will handle cache management. <br>
+Reason for doing this in the `activate` event and not the `install` event is to avoid removing old caches that an older service worker may be using.
+
+```javascript
+self.addEventListener('activate', function(event) {
+
+  var cacheWhitelist = ['cache-v1', 'cache-other-v1'];
+
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cacheName) {
+          if (cacheWhitelist.indexOf(cacheName) === -1) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
+```
+#### Things to be mindful of
+Service workers are relatively new and there are still a few gotchas worth remembering, which you should read [here](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers#rough_edges_and_gotchas)
