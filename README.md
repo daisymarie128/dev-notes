@@ -8,6 +8,7 @@ This is a collection of my notes from different things I've learnt while program
 - [HTML](#HTML)
 - [NPM](#npm)
 - [UNITY](#unity)
+- [Progressive Web Apps](other/temporary-pwa.md)
 - [Other](#other)
 
 
@@ -53,4 +54,4 @@ This is a collection of my notes from different things I've learnt while program
 
 ## Other
 - [blender](other/blender.md)
-- [pwa temp](other/temporary-pwa.md)
+- [Progressive Web Apps](other/temporary-pwa.md)

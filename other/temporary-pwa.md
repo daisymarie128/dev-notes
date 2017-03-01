@@ -5,7 +5,7 @@ This course usually goes for three days, however we attended the course for two 
 ## Contents
 - [x] [Introduction to Progressive Web Apps](#introduction-to-progressive-web-apps)<br>
 - [ ] [New techniques for responsive design (with lab)](#New techniques for responsive design)<br>
-- [ ] [Working with Responsive Images (with lab)](#)<br>
+- [x] [Working with Responsive Images (with lab)](#)<br>
 - [x] [Introduction to Service Workers](#introduction-to-service-workers)<br>
 - [ ] [Adding offline support for an existing content site (with lab)](#)<br>
 - [ ] [Designing PWA support for dynamic sites & web apps](#)<br>
