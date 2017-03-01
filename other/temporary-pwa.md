@@ -9,7 +9,7 @@ This course usually goes for three days, however we attended the course for two 
 - [x] [Introduction to Service Workers](#introduction-to-service-workers)<br>
 - [ ] [Adding offline support for an existing content site (with lab)](#)<br>
 - [ ] [Designing PWA support for dynamic sites & web apps](#)<br>
-- [x] [Auditing an existing site with Lighthouse (with lab)](#lighthouse)<br>
+- [x] [Auditing an existing site with Lighthouse (with lab)](#auditing-an-existing-site-with-lighthouse)<br>
 - [ ] [Using sw-toolbox and sw-precache to automate Service Worker creation (with lab)](#)<br>
 - [x] [Deeper dive into core technologies (Promises, Fetch API, Cache API)](#caching-and-return-requests)<br>
 - [ ] [Working with Indexed DB (with lab)](#)<br>
@@ -28,7 +28,7 @@ This new level of of quality allows Progressive Web Apps to earn a place on the 
 ## New techniques for responsive design
 
 
-## Auditing an existing site with Lighthouse (with lab)
+## Auditing an existing site with Lighthouse
 [**Get Lighthouse**](https://developers.google.com/web/tools/lighthouse/)<br>
 Lighthouse is a tool for auditing an app for PWA features and checking your app meets a respectable bar for web performance under emulated mobile conditions.<br>
 > Lighthouse can be run as a Chrome Extension, from the command line, or used programmatically as a Node module.
