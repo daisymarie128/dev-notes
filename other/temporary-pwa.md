@@ -217,3 +217,68 @@ self.addEventListener('activate', function(event) {
 ```
 #### Things to be mindful of
 Service workers are relatively new and there are still a few gotchas worth remembering, which you should read [here](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers#rough_edges_and_gotchas)
+
+
+### Working with Responsive Images
+Images account for more than 60% of the bytes on average needed to load a web page.<br>
+Here are some checklists to optimize image performance:
+
+- Use relative sizes for images to prevent them from accidentally overflowing the container.<br>
+- Use the `picture` element when you want to specify different images depending on device characteristics (a.k.a. art direction).<br>
+- Use `srcset` and the `x` descriptor in the `img` element to give hints to the browser about the best image to use when choosing from different densities.<br>
+- If your page only has one or two images and these are not used elsewhere on your site, consider using inline images to reduce file requests.
+
+**Relative Image Sizes**
+Use relative width sizes depending on the parents container, bot the viewport. i.e `width: 50%`.<br>
+Because CSS allows content to overflow its container, you may need to use max-width: 100% to prevent images and other content from overflowing. For example:
+```css
+img, embed, object, video {
+  max-width: 100%;
+}
+```
+
+Also remember to use meaningful descriptions on the `alt` tag.
+
+**Enhance images with srcset**
+The `srcset` attribute enhances the behavior of the `img` element, making it easy to provide multiple image files for different device characteristics. <br>
+`srcset` allows the browser to choose the best image depending on the characteristics of the device.<br>
+```html
+<img src="photo.png" srcset="photo@2x.png 2x" ...>
+```
+
+If a browser doesn't support the `srcset` attribute, then the default `src` image will be used.<br>
+When `srcset` is supported, the comma-separated list of image/conditions is parsed prior to making any requests, and only the most appropriate image is downloaded and displayed.
+
+Use the `picture` element when an image source exists in multiple densities, or when a responsive design dictates a somewhat different image on some types of screens.
+```html
+<picture>
+  <source media="(min-width: 800px)" srcset="image.jpg, image-2x.jpg 2x">
+  <source media="(min-width: 450px)" srcset="image-small.jpg, image-small-2x.jpg 2x">
+  <img src="image-fb.jpg" srcset="image-fb-2x.jpg 2x" alt="image of something">
+</picture>
+```
+
+The above code snippet shows how you can include different source images for different screen widths. It's also important to note that the default `img` is set for any device widths smaller than `450px`.
+
+**Relative sized images**
+Instead of supplying fixed image sizes and densities, you can specify the size of each supplied image by adding a width descriptor along with the size of the image element.<br>
+The browser will automatically calculate the effective pixel density and choose the best image to download.<br>
+This example renders an image that is half the viewport width `(sizes="50vw")`, and depending on the width of the browser and its device pixel ratio, allows the browser to choose the correct image regardless of how large the browser window is.
+```html
+<img src="image-200.jpg"
+     sizes="50vw"
+     srcset="image-100.jpg 100w, image-200.jpg 200w,
+             image-400.jpg 400w, image-800.jpg 800w,
+             image-1000.jpg 1000w, image-1400.jpg 1400w,
+             image-1800.jpg 1800w"
+     alt="image of something"
+>
+```
+
+You can also set multiple sizes:
+```html
+<img src="400.png"
+     sizes="(min-width: 600px) 25vw, (min-width: 500px) 50vw, 100vw"
+     srcset="100.png 100w, 200.png 200w, 400.png 400w,
+             800.png 800w, 1600.png 1600w, 2000.png 2000w" alt="an example image">
+```
