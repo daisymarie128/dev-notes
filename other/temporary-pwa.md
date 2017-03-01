@@ -4,20 +4,20 @@ This course usually goes for three days, however we attended the course for two 
 
 ## Contents
 - [x] [Introduction to Progressive Web Apps](#introduction-to-progressive-web-apps)<br>
-- [ ] [New techniques for responsive design (with lab)](#New techniques for responsive design)<br>
-- [x] [Working with Responsive Images (with lab)](#)<br>
+- [ ] [New techniques for responsive design (with lab)](#new-techniques-for-responsive-design)<br>
+- [x] [Working with Responsive Images (with lab)](#working-with-responsive-images)<br>
 - [x] [Introduction to Service Workers](#introduction-to-service-workers)<br>
 - [ ] [Adding offline support for an existing content site (with lab)](#)<br>
 - [ ] [Designing PWA support for dynamic sites & web apps](#)<br>
 - [x] [Auditing an existing site with Lighthouse (with lab)](#lighthouse)<br>
 - [ ] [Using sw-toolbox and sw-precache to automate Service Worker creation (with lab)](#)<br>
-- [x] [Deeper dive into core technologies (Promises, Fetch API, Cache API)](#)<br>
+- [x] [Deeper dive into core technologies (Promises, Fetch API, Cache API)](#caching-and-return-requests)<br>
 - [ ] [Working with Indexed DB (with lab)](#)<br>
 - [ ] [Building apps that cache live data in the service worker](#)<br>
 - [ ] [Discoverability & Analytics](#)<br>
 
 ## Introduction to Progressive Web Apps
-By definintion Progressive Web Apps are user experiences that have the reach of the web, and are:
+By definition Progressive Web Apps are user experiences that have the reach of the web, and are:
 - **Reliable** - Load instantly and never show the downasaur, even in uncertain network conditions.
 - **Fast** - Respond quickly to user interactions with silky smooth animations and no janky scrolling.
 - **Engaging** - Feel like a natural app on the device, with an immersive user experience.
@@ -135,7 +135,7 @@ In Chrome DevTools:<br>
 
 You should see that all the files in URLs list are in the CACHE_NAME (whatever you named it) cache.
 
-#### Caching an Return requests
+#### Caching and Return requests
 Even though you've now cached our files, you now need to tell your application to use them when a user comes back to your site. To do this we need to use the `fetch event`. This is what you will call to fetch the files you have just cached.
 
 The fetch event makes it possible to intercept every HTTP request the browser does from the page where you attached the ServiceWorker.<br>
