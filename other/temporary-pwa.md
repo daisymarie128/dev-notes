@@ -26,6 +26,73 @@ This new level of of quality allows Progressive Web Apps to earn a place on the 
 
 
 ## New techniques for responsive design
+**Set the Viewport**
+ A meta viewport tag gives the browser instructions on how to control the page's dimensions and scaling.
+
+Use the meta viewport tag to control the width and scaling of the browser's viewport.<br>
+Include width=device-width to match the screen's width in device-independent pixels.<br>
+Include initial-scale=1 to establish a 1:1 relationship between CSS pixels and device-in§dependent pixels.<br>
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1">
+```
+
+**Use media queries**
+Use media queries!
+```css
+@media (min-width: 500px) and (max-width: 600px) {
+    h1 {
+      color: red;
+    }
+  }
+ ```
+How to choose breakpoints:
+Don't base breakpoints on devices, products, brand names, or operating systems that are in use today. This will become annoying to maintain.<br>
+Instead:
+- Design based on content.
+- Design for the smallest mobile device first; then progressively enhance the experience as more screen real estate becomes available.
+- Keep lines of text to a maximum of around 70 or 80 characters.
+- Keep in mind you don't want to end up with to many break points – safe to have about 3 (but this depends on what your site needs)
+
+**Pointers and Hovers**
+ Use `any-pointer` and `any-hover`. They are similar to `pointer` and `hover` but instead allow you to target all pointer devices rather than just the primary pointer device.
+
+ **Relative Units**
+ Use relative units!<br>
+ Using relative units for measurements can help simplify layouts and prevent accidental creation of components that are too big for the viewport.
+
+ ***Don't do***
+ ```css
+.fullWidth {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+ ```
+ ***Instead Use***
+ ```css
+.fullWidth {
+   width: 100%;
+ }
+ ```
+
+ **Forms**
+ Providing autocomplete functionality on your forms is an important UX feature that helps users get through your site quicker.<br>
+ It's as simple as adding an `autocomplete` tag to your form.<br>
+ ```html
+ <label for="frmNameA">Name</label>
+<input type="text" name="name" id="frmNameA"
+  placeholder="Full name" required autocomplete="name">
+
+<label for="frmEmailA">Email</label>
+<input type="email" name="email" id="frmEmailA"
+  placeholder="name@example.com" required autocomplete="email">
+
+<label for="frmPhoneNumA">Phone</label>
+<input type="tel" name="phone" id="frmPhoneNumA"
+  placeholder="+1-555-555-1212" required autocomplete="tel">
+ ```
+
+A list of fields can be found [here](https://developers.google.com/web/fundamentals/design-and-ui/input/forms/#use_metadata_to_enable_auto-complete)
 
 
 ## Auditing an existing site with Lighthouse
