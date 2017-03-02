@@ -26,8 +26,13 @@ This new level of of quality allows Progressive Web Apps to earn a place on the 
 
 
 ## New techniques for responsive design
-**Set the Viewport**
+**Set the Viewport**<br>
  A meta viewport tag gives the browser instructions on how to control the page's dimensions and scaling.
+
+ A basic example of using responsive design techniques can be found [here](https://github.com/daisymarie128/pwa-exercises/tree/master/responsive-design-lab/app)
+ - Clone the repo
+ - Start a local server and navigate to the appropriate local host port (e.g http://localhost:8080/)
+ - Resize your window and see how the columns change.
 
 Use the meta viewport tag to control the width and scaling of the browser's viewport.<br>
 Include width=device-width to match the screen's width in device-independent pixels.<br>
@@ -36,7 +41,7 @@ Include initial-scale=1 to establish a 1:1 relationship between CSS pixels and d
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
 
-**Use media queries**
+**Use media queries**<br>
 Use media queries!
 ```css
 @media (min-width: 500px) and (max-width: 600px) {
@@ -53,10 +58,10 @@ Instead:
 - Keep lines of text to a maximum of around 70 or 80 characters.
 - Keep in mind you don't want to end up with to many break points – safe to have about 3 (but this depends on what your site needs)
 
-**Pointers and Hovers**
+**Pointers and Hovers**<br>
  Use `any-pointer` and `any-hover`. They are similar to `pointer` and `hover` but instead allow you to target all pointer devices rather than just the primary pointer device.
 
- **Relative Units**
+ **Relative Units**<br>
  Use relative units!<br>
  Using relative units for measurements can help simplify layouts and prevent accidental creation of components that are too big for the viewport.
 
@@ -75,7 +80,7 @@ Instead:
  }
  ```
 
- **Forms**
+ **Forms**<br>
  Providing autocomplete functionality on your forms is an important UX feature that helps users get through your site quicker.<br>
  It's as simple as adding an `autocomplete` tag to your form.<br>
  ```html
@@ -100,6 +105,11 @@ A list of fields can be found [here](https://developers.google.com/web/fundament
 Lighthouse is a tool for auditing an app for PWA features and checking your app meets a respectable bar for web performance under emulated mobile conditions.<br>
 > Lighthouse can be run as a Chrome Extension, from the command line, or used programmatically as a Node module.
 
+A basic example of using responsive design techniques can be found [here](https://github.com/daisymarie128/pwa-exercises/tree/master/lighthouse-lab/app)
+- Clone the repo
+- Start a local server and navigate to the appropriate local host port (e.g http://localhost:8080/)
+- Run the lighthouse extension and see the results you get.
+
 
 ## App Shell
 The app's shell is the minimal HTML, CSS, and JavaScript that is required to power the user interface. Its first load should be extremely quick and immediately cached, it should be loaded once over the network and then saved to the local device. Next time the user comes to the site on their device the files are loaded from their cache and start-up time should be extremely fast now.<br>
@@ -122,14 +132,21 @@ When designing a more complex app, content that isn't needed for the initial loa
 ## Introduction to Service Workers
 A service worker is a script that your browser runs in the background, separate from a web page, opening the door to features that don't need a web page or user interaction.<br>
 
-It is a programmable network proxy, allowing you to control how network requests from your page are handled. –
+It is a programmable network proxy, allowing you to control how network requests from your page are handled.
 
-##### Features <br>
+##### Features
 Intercept network requests<br>
 Requests caching<br>
 Push notifications<br>
 Background sync (proposed)<br>
 Geo-fencing (proposed)
+
+A working example of a site using a service worker can be found [here](https://github.com/daisymarie128/pwa-exercises/tree/master/cache-api-lab/app)
+- Clone the repo
+- Start a local server and navigate to the appropriate local host port (e.g http://localhost:8080/)
+- Open up Chrome DevTools
+- Go to the Application tab
+- Read instructions below on how to see your service worker.
 
 #### Registering
 ***Example of how to register your service worker***
@@ -286,7 +303,7 @@ self.addEventListener('activate', function(event) {
 Service workers are relatively new and there are still a few gotchas worth remembering, which you should read [here](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers#rough_edges_and_gotchas)
 
 
-### Working with Responsive Images
+## Working with Responsive Images
 Images account for more than 60% of the bytes on average needed to load a web page.<br>
 Here are some checklists to optimize image performance:
 
@@ -294,6 +311,13 @@ Here are some checklists to optimize image performance:
 - Use the `picture` element when you want to specify different images depending on device characteristics (a.k.a. art direction).<br>
 - Use `srcset` and the `x` descriptor in the `img` element to give hints to the browser about the best image to use when choosing from different densities.<br>
 - If your page only has one or two images and these are not used elsewhere on your site, consider using inline images to reduce file requests.
+
+A working example of using responsive images can be found [here](https://github.com/daisymarie128/pwa-exercises/tree/master/responsive-images-lab)
+- Clone the repo
+- Start a local server and navigate to the appropriate local host port (e.g http://localhost:8080/)
+- Open up Chrome DevTools
+- Go to the Networks tab
+- Resize your window and watch the different files get loaded depending on the viewport.
 
 **Relative Image Sizes**
 Use relative width sizes depending on the parents container, bot the viewport. i.e `width: 50%`.<br>
