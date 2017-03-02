@@ -388,9 +388,9 @@ First Header | Second Header
 Content from cell 1 | Content from cell 2
 Content in the first column | Content in the second column
 
-<!-- | Default                | Firefox                                           | Mobile Safari | Desktop Safari                     | IE10+                                   |
-| ----------------------|-------------------------------------------------| -------------| ----------------------------------| ---------------------------------------|
-| 50% of free disk space | no limits, but will prompt after 50MB data stored | 50MB max      | unlimited (prompts after 5MB)      | maxes at 250MB and prompts at 10MB      | -->
+Default                | Firefox                                           | Mobile Safari | Desktop Safari                     | IE10+                                   |
+----------------------|-------------------------------------------------| -------------| ----------------------------------| ---------------------------------------|
+50% of free disk space | no limits, but will prompt after 50MB data stored | 50MB max      | unlimited (prompts after 5MB)      | maxes at 250MB and prompts at 10MB      |
 
 #### Basic Implementation
 ```js
