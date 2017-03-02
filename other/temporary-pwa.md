@@ -383,13 +383,8 @@ In order to use IndexedDB you need to:<br>
 #### Storage
 Firefox: no limits, but will prompt after 50MB data stored. Mobile Safari: 50MB max, Desktop Safari: unlimited (prompts after 5MB), IE10+ maxes at 250MB and prompts at 10MB.<br>
 
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
-
 Default                | Firefox                                           | Mobile Safari | Desktop Safari                     | IE10+                                   |
-----------------------|-------------------------------------------------| -------------| ----------------------------------| ---------------------------------------|
+---------------------- |---------------------------------------------------| --------------| -----------------------------------| ----------------------------------------|
 50% of free disk space | no limits, but will prompt after 50MB data stored | 50MB max      | unlimited (prompts after 5MB)      | maxes at 250MB and prompts at 10MB      |
 
 #### Basic Implementation
