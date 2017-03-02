@@ -430,3 +430,8 @@ request.onupgradeneeded = function(event) {
 };
 ```
 Read more on IndexedDB [here](https://developer.mozilla.org/en/docs/Web/API/IndexedDB_API)
+
+
+## Using sw-toolbox and sw-precache to automate Service Worker creation
+sw-toolbox and sw-precache are optional libraries to help with writing service workers, they just provide some simple helpers for use, and can integrate with your build process.
+Read [here](https://googlechrome.github.io/sw-toolbox/) on how to install
