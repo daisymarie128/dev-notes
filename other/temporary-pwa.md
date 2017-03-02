@@ -29,7 +29,7 @@ This new level of of quality allows Progressive Web Apps to earn a place on the 
 **Set the Viewport**<br>
  A meta viewport tag gives the browser instructions on how to control the page's dimensions and scaling.
 
- A basic example of using responsive design techniques can be found [here](https://github.com/daisymarie128/pwa-exercises/tree/master/responsive-design-lab/app)
+ A basic example of using responsive design techniques can be found [here](https://github.com/daisymarie128/pwa-training-labs/tree/master/responsive-design-lab/app)
  - Clone the repo
  - Start a local server and navigate to the appropriate local host port (e.g http://localhost:8080/)
  - Resize your window and see how the columns change.
@@ -105,7 +105,7 @@ A list of fields can be found [here](https://developers.google.com/web/fundament
 Lighthouse is a tool for auditing an app for PWA features and checking your app meets a respectable bar for web performance under emulated mobile conditions.<br>
 > Lighthouse can be run as a Chrome Extension, from the command line, or used programmatically as a Node module.
 
-A basic example of using responsive design techniques can be found [here](https://github.com/daisymarie128/pwa-exercises/tree/master/lighthouse-lab/app)
+A basic example of using responsive design techniques can be found [here](https://github.com/daisymarie128/pwa-training-labs/tree/master/lighthouse-lab/app)
 - Clone the repo
 - Start a local server and navigate to the appropriate local host port (e.g http://localhost:8080/)
 - Run the lighthouse extension and see the results you get.
@@ -141,7 +141,7 @@ Push notifications<br>
 Background sync (proposed)<br>
 Geo-fencing (proposed)
 
-A working example of a site using a service worker can be found [here](https://github.com/daisymarie128/pwa-exercises/tree/master/cache-api-lab/app)
+A working example of a site using a service worker can be found [here](https://github.com/daisymarie128/pwa-training-labs/tree/master/cache-api-lab/app)
 - Clone the repo
 - Start a local server and navigate to the appropriate local host port (e.g http://localhost:8080/)
 - Open up Chrome DevTools
@@ -312,7 +312,7 @@ Here are some checklists to optimize image performance:
 - Use `srcset` and the `x` descriptor in the `img` element to give hints to the browser about the best image to use when choosing from different densities.<br>
 - If your page only has one or two images and these are not used elsewhere on your site, consider using inline images to reduce file requests.
 
-A working example of using responsive images can be found [here](https://github.com/daisymarie128/pwa-exercises/tree/master/responsive-images-lab)
+A working example of using responsive images can be found [here](https://github.com/daisymarie128/pwa-training-labs/tree/master/responsive-images-lab)
 - Clone the repo
 - Start a local server and navigate to the appropriate local host port (e.g http://localhost:8080/)
 - Open up Chrome DevTools
