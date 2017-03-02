@@ -373,3 +373,61 @@ You can also set multiple sizes:
      srcset="100.png 100w, 200.png 200w, 400.png 400w,
              800.png 800w, 1600.png 1600w, 2000.png 2000w" alt="an example image">
 ```
+
+## IndexedDB
+IndexedDB is a low-level API for client-side storage of significant amounts of structured data, including files/blobs and is a JavaScript-based object-oriented database.<br>
+It lets you store and retrieve objects that are indexed with a key; any objects supported by the structured clone algorithm can be stored.<br>
+In order to use IndexedDB you need to:<br>
+***specify the database schema -> open a connection to your database -> retrieve and update data within a series of transactions***
+
+#### Storage
+Firefox: no limits, but will prompt after 50MB data stored. Mobile Safari: 50MB max, Desktop Safari: unlimited (prompts after 5MB), IE10+ maxes at 250MB and prompts at 10MB.<br>
+| Default                | Firefox                                           | Mobile Safari | Desktop Safari                     | IE10+                                   |
+| -----------------------|:-------------------------------------------------:| -------------:| ----------------------------------:| ---------------------------------------:|
+| 50% of free disk space | no limits, but will prompt after 50MB data stored | 50MB max      | unlimited (prompts after 5MB)      | maxes at 250MB and prompts at 10MB      |
+
+#### Basic Implementation
+```js
+// open our database
+const request = window.indexedDB.open("yourDatabase", 3);
+```
+
+The `open()` function returns an `IDBOpenDBRequest` object with a result (success) or error.<br>
+The second parameter (in this case `3`) is the version of the database. The version of the database determines the database schema — the object stores in the database and their structure.<br>
+> Note: Don't use floats for this number as it will be rounded to the nearest int
+
+```js
+request.onsuccess = (event) => {
+  db = event.target.result;
+};
+```
+
+`request.result` is an instance of `IDBDatabase` and it's important to save this to use later.
+
+#### Structuring the database
+IndexedDB uses object stores rather than tables, and a single database can contain any number of object stores. Values are always associated with a key.
+
+```js
+request.onupgradeneeded = function(event) {
+  const db = event.target.result;
+
+  // Create an objectStore to hold information about our contacts.
+  const objectStore = db.createObjectStore('contacts', {keyPath: 'id'});
+
+  // Create an index to search contacts by name. We may have duplicates
+  // so we can't use a unique index.
+  objectStore.createIndex("name", "name", { unique: false });
+  objectStore.createIndex("email", "email", { unique: true });
+
+  // Use transaction oncomplete to make sure the objectStore creation is
+  // finished before adding data into it.
+  objectStore.transaction.oncomplete = (event) => {
+    // Store values in the newly created objectStore.
+    let contactsObjectStore = db.transaction("contacts", "readwrite").objectStore("contacts");
+    for (var i in ourData) {
+      contactsObjectStore.add(ourData[i]);
+    }
+  };
+};
+```
+Read more on IndexedDB [here](https://developer.mozilla.org/en/docs/Web/API/IndexedDB_API)
