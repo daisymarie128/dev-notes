@@ -68,24 +68,7 @@ Now imagine a fragment like this :
 A triangle - and it reads its three verticies which it is made up of. And now each pixel in the triangle needs to be drawn out. A fragment is the data provided by these 3 vertices in order to color the triangle. So if one vertex was red and another blue - you would get a gradient from red - purple - blue.
 
 #### Shader Variables
-Three declarations you can make<br>
-UNIFORMS - ATTRIBUTES - VARYINGS
-
-**uniforms**
-- sent to both shaders
-- contain values that stay the same across the entire frame being rendered
-- attributes which are passed from CPU to GPU
-
-**attributes**
-- applied to individual vertices
-- ONLY available to vertex shaders
-- could be like each vertex having a distinct color
-- one to one relation ship with verticies
-
-**varyings**
-- declared in the vertex shader BUT want to SHARE with the fragment shader
-- MAKE SURE to declare a varying variable of the same type and name in both the vertex and fragment shader.
-- common for vertex normals which can be used for lighting calcs.
+For an explanation of what shaders are and how to use them read [this](#)
 
 #### Basic shader setup
 
