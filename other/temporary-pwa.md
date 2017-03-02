@@ -381,8 +381,6 @@ In order to use IndexedDB you need to:<br>
 ***specify the database schema -> open a connection to your database -> retrieve and update data within a series of transactions***
 
 #### Storage
-Firefox: no limits, but will prompt after 50MB data stored. Mobile Safari: 50MB max, Desktop Safari: unlimited (prompts after 5MB), IE10+ maxes at 250MB and prompts at 10MB.<br>
-
 Default                | Firefox                                           | Mobile Safari       | Desktop Safari                     | IE10+                                   |
 ---------------------- |---------------------------------------------------| --------------------| -----------------------------------| ----------------------------------------|
 50% of free disk space | no limits, but will prompt after 50MB data stored | 50MB max            | unlimited (prompts after 5MB)      | maxes at 250MB and prompts at 10MB      |
