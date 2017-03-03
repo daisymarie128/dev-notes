@@ -25,8 +25,8 @@ A triangle – and it reads its three vertices which it is made up of. And now e
 #### Shader Variables
 There are three declarations you can make using shaders.<br>
 
-UNIFORMS                                                     |ATTRIBUTES                              |VARYINGS                                                                     |
------------------------------------------------------------: |--------------------------------------: |---------------------------------------------------------------------------: |
+ UNIFORMS                                                    | ATTRIBUTES                             | VARYINGS                                                                    |
+:----------------------------------------------------------- |:-------------------------------------- |:--------------------------------------------------------------------------- |
 Sent to both shaders                                         |Applied to individual vertices          |Declared in the vertex shader BUT want to be shared with the fragment shader |
 Value that stays the same across entire frame being rendered |Only available to the vertex shader     |Processed in the vertex shader first                                         |
 Values which are passed from the CPU to the GPU              |One to one relation ship with vertices  |Fragment shader receives interpolated data                                   |
