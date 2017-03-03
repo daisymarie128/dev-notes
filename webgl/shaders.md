@@ -91,3 +91,15 @@ void main() {
   gl_FragColor = vec4(green, 1.0);
 }
 ```
+
+***Example of using an image***
+```glsl
+// these two uniform would be passed in through your js
+uniform vec2 resolution; // viewport size
+uniform sampler2D yourImage;
+void main() {
+{
+  vec2 uv = vUv.xy / resolution.xy;
+  gl_FragColor = texture2D(yourImage, uv);
+}
+```
