@@ -69,7 +69,7 @@ vertex = vec2(x, y);
 ```js
 vertex = vec3(x, y, z);
 ```
-*example of vertex coordinates*
+*example of vertex coordinates*<br>
 <img src="../assets/webgl/vertex-example.png" width="400px"/>
 
 You can also access values from data you've created like so:
