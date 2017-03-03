@@ -44,16 +44,16 @@ void main () {
   gl_FragColor = vec4(vUv.xy, 1.0, 1.0);
 }
 ```
-*result:*
+*result:*<br>
 <img src="../assets/webgl/basic-shder.png" width="450px"/>
 
 #### Data Types & Syntax
 Heres a list of different data types you can use:<br>
-`float` - a simple float value, e.g. 1.0
-`int` - an integer, e.g. 1
-`vec2` - a vector with 2 floats, e.g. vec2(x, y)
-`vec3` - a vector with 3 floats, e.g. vec3(x, y, z) or vec3(r, g, b)
-`vec4` - a vector with 4 floats, e.g. (r, g, b, a)
+`float` - a simple float value, e.g. 1.0<br>
+`int` - an integer, e.g. 1<br>
+`vec2` - a vector with 2 floats, e.g. vec2(x, y)<br>
+`vec3` - a vector with 3 floats, e.g. vec3(x, y, z) or vec3(r, g, b)<br>
+`vec4` - a vector with 4 floats, e.g. (r, g, b, a)<br>
 `sampler2D` - a special type which deals with texture/image sampling.
 
 A vector is simply a point in space, which is sometimes depicted using arrows. Because vectors usually have a direction. That is usually how you would calculate the distance from points. A vector is made up of at least 2 or more numbers. So a vertex is a point where two or more straight lines meet, like a corner. This value will be made up of 2 or 3 values (depending on 2D or 3D representation) and you can think of these as coordinates for where that vertex is.
