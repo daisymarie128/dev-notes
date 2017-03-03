@@ -94,6 +94,8 @@ void main() {
 
 ***Example of using an image***
 ```glsl
+varying vec2 vUv;
+
 // these two uniform would be passed in through your js
 uniform vec2 resolution; // viewport size
 uniform sampler2D yourImage;
