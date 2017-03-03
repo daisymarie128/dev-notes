@@ -25,7 +25,7 @@ This is a collection of my notes from different things I've learnt while program
 
 ### General
 - [scrolling](js/general/scrolling.md)
-- [Progressive Web Apps](js/pwa.md)<br>
+- [Progressive Web Apps](js/general/pwa.md)<br>
   *This contains information on:*
   - Introduction to PWA
   - New techniques for responsive design
