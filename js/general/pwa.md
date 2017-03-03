@@ -119,7 +119,7 @@ Designing your app using the shell allows you to focus on speed and gives you si
 
 > example of what the shell should be
 
-<img src="../assets/pwa/app-shell.png" width="450px"/>
+<img src="../../assets/pwa/app-shell.png" width="450px"/>
 
 ##### Design tips for a shell
 First break the site down to its core components.
@@ -270,7 +270,7 @@ self.addEventListener('fetch', function(event) {
 **How to test your site offline**<br>
 ***open DevTools -> Click on "Application" -> Service Workers***<br>
 Then toggle the offline checkbox.<br>
-<img src="../assets/pwa/testing-offline.png" width="300px"/>
+<img src="../../assets/pwa/testing-offline.png" width="300px"/>
 
 #### Updating
 At some stage your service worker will need to be updated.<br>
