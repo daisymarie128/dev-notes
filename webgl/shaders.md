@@ -22,7 +22,7 @@ Its one MUST do job is: set or discard the `gl_FragColor` variable, another 4D f
 Now imagine a fragment like this:<br>
 A triangle – and it reads its three vertices which it is made up of. And now each pixel in the triangle needs to be drawn out. A fragment is the data provided by these 3 vertices in order to color the triangle. So if one vertex was red and another blue - you would get a gradient from red - purple - blue.
 
-*Example of what the shaders compute*<br>
+***Example of what the shaders compute***<br>
 <img src="../assets/webgl/shader-triangle.png" width="450px"/>
 
 #### Shader Variables
@@ -44,7 +44,7 @@ void main () {
   gl_FragColor = vec4(vUv.xy, 1.0, 1.0);
 }
 ```
-*result:*<br>
+***result:***<br>
 <img src="../assets/webgl/basic-shder.png" width="450px"/>
 
 #### Data Types & Syntax
@@ -69,12 +69,12 @@ vertex = vec2(x, y);
 ```js
 vertex = vec3(x, y, z);
 ```
-*example of vertex coordinates*<br>
+***example of vertex coordinates***<br>
 <img src="../assets/webgl/vertex-example.png" width="400px"/>
 
 You can also access values from data you've created like so:
 ```glsl
-const vec3 red = vec3(1.0, 0.0, 0.0);
+vec3 red = vec3(1.0, 0.0, 0.0);
 
 void main() {
   gl_FragColor = vec4(red.r, red.g, red.b, 1.0);
@@ -83,9 +83,9 @@ void main() {
 
 ***Example of declaring colors***
 ```glsl
-const vec3 red = vec3(1.0, 0.0, 0.0);
-const vec3 green = vec3(0.0, 1.0, 0.0);
-const vec3 blue = vec3(0.0, 0.0, 1.0);
+vec3 red = vec3(1.0, 0.0, 0.0);
+vec3 green = vec3(0.0, 1.0, 0.0);
+vec3 blue = vec3(0.0, 0.0, 1.0);
 
 void main() {
   gl_FragColor = vec4(green, 1.0);
