@@ -3,9 +3,9 @@ This is a collection of my notes from different things I've learnt while program
 
 ## CATEGORIES
 - [Javascript](#javascript)
-- [CSS](#CSS)
-- [GIT](#GIT)
-- [HTML](#HTML)
+- [CSS](#css)
+- [GIT](#git)
+- [HTML](#html)
 - [NPM](#npm)
 - [UNITY](#unity)
 - [Other](#other)
