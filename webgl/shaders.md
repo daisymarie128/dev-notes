@@ -22,8 +22,8 @@ Its one MUST do job is: set or discard the `gl_FragColor` variable, another 4D f
 Now imagine a fragment like this:<br>
 A triangle – and it reads its three vertices which it is made up of. And now each pixel in the triangle needs to be drawn out. A fragment is the data provided by these 3 vertices in order to color the triangle. So if one vertex was red and another blue - you would get a gradient from red - purple - blue.
 
-*Example of what the shaders compute*
-<img src="../assets/webgl/shader-example.png" width="450px"/>
+*Example of what the shaders compute*<br>
+<img src="../assets/webgl/shader-triangle.png" width="450px"/>
 
 #### Shader Variables
 There are three declarations you can make using shaders.<br>
@@ -59,13 +59,13 @@ Heres a list of different data types you can use:<br>
 A vector is simply a point in space, which is sometimes depicted using arrows. Because vectors usually have a direction. That is usually how you would calculate the distance from points. A vector is made up of at least 2 or more numbers. So a vertex is a point where two or more straight lines meet, like a corner. This value will be made up of 2 or 3 values (depending on 2D or 3D representation) and you can think of these as coordinates for where that vertex is.
 
 For example 2D coordinates would be:<br>
-```c
+```js
 vertex = vec2(x, y);
 ```
 
 3D coordinants would be:<br>
-```c
+```js
 vertex = vec3(x, y, z);
 ```
 
-<img src="../assets/webgl/vertex-example.png" width="200px"/>
+<img src="../assets/webgl/vertex-example.png" width="400px"/>
