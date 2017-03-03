@@ -28,13 +28,13 @@ This is a collection of my notes from different things I've learnt while program
 - [scrolling](js/general/scrolling.md)
 - [Progressive Web Apps](js/general/pwa.md)<br>
   *This contains information on:*
-  - Introduction to PWA
-  - New techniques for responsive design
-  - Working with Responsive Images
-  - Lighthouse
+  - [Introduction to PWA](js/general/pwa.md#introduction-to-progressive-web-apps)
+  - [New techniques for responsive design](js/general/pwa.md#new-techniques-for-responsive-design)
+  - [Working with Responsive Images](js/general/pwa.md#working-with-responsive-images)
+  - [Lighthouse](js/general/pwa.md#auditing-an-existing-site-with-lighthouse)
   - [Service Workers](js/general/pwa.md#introduction-to-service-workers)
-  - Working with Indexed DB
-  - PWA automating tools
+  - [Working with Indexed DB](js/general/pwa.md#indexeddb)
+  - [PWA automating tools](js/general/pwa.md#using-sw-toolbox-and-sw-precache-to-automate-Service-Worker-creation)
 
 ### Patterns
 - [IIFE](js/patterns/iife.md)
