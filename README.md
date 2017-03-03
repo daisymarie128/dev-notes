@@ -8,7 +8,6 @@ This is a collection of my notes from different things I've learnt while program
 - [HTML](#HTML)
 - [NPM](#npm)
 - [UNITY](#unity)
-- [Progressive Web Apps](other/temporary-pwa.md)
 - [Other](#other)
 
 
@@ -26,6 +25,15 @@ This is a collection of my notes from different things I've learnt while program
 
 ### General
 - [scrolling](js/general/scrolling.md)
+- [Progressive Web Apps](js/pwa.md)<br>
+  *This contains information on:*
+  - Introduction to PWA
+  - New techniques for responsive design
+  - Working with Responsive Images
+  - Lighthouse
+  - Service Workers
+  - Working with Indexed DB
+  - PWA automating tools
 
 ### Patterns
 - [IIFE](js/patterns/iife.md)
@@ -63,4 +71,3 @@ This is a collection of my notes from different things I've learnt while program
 
 ## Other
 - [blender](other/blender.md)
-- [Progressive Web Apps](other/temporary-pwa.md)
