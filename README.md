@@ -63,6 +63,7 @@ This is a collection of my notes from different things I've learnt while program
 
 ## HTML
 ## Webpack
+- [Basic Setup](webpack/basic-setup.md)
 
 ## Unity
 - [AR basics](unity/AR/basics.md)
