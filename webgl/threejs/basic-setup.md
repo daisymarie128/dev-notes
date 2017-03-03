@@ -50,29 +50,10 @@ render = () => {
 ```
 
 ### Shaders
-A shader is a script which is processed on your GPU instead of you CPU which makes it's performance for graphics extremely fast. Using a shader can speed up your app significantly.<br>
-Shaders are written in C not in javascript.<br>
-There are two types on shaders:<br>
-[Vertex Shader](#vertex)<br>
-[Fragment Shader](#fragment)
-
-<!-- TODO: update this -->
-#### Vertex
-consider it like this:
-Take a standard sphere. Its made up of many vertices (depending on the detail more). A vertex shader takes these points and manipulates them (moves them etc - this is how you can animate with a shader). It has one main responsibility - it MUST at some point set something called gl_Position (a 4d float vector - this is the final position of the vertex on screen ).
-
-#### Fragment
-COLOR - very much to do with texture, lighting and color.<br>
-Its one MUST do job is: set or discard the gl_FragColor variable, another 4D float vector - the final color of our fragment.<br>
-Now imagine a fragment like this :
-A triangle - and it reads its three verticies which it is made up of. And now each pixel in the triangle needs to be drawn out. A fragment is the data provided by these 3 vertices in order to color the triangle. So if one vertex was red and another blue - you would get a gradient from red - purple - blue.
-
-#### Shader Variables
-For an explanation of what shaders are and how to use them read [this](#)
+For an explanation of what shaders are and how to use them read [this](../shaders.md)
 
 #### Basic shader setup
-
-This is a basic template for setting up a html and js file for prototyping a threejs project using a shader.<br>
+This is a basic template for setting up a html and js file for prototyping a threejs project using shaders.<br>
 In this case our shader is taking a time uniform and a mouse position and using that to affect the texture.
 
 ***js***
