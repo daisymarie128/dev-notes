@@ -36,7 +36,7 @@ Values which are passed from the CPU to the GPU              |One to one relatio
 
 
 This is an example of a basic fragment shader:
-```c
+```glsl
 precision highp float;
 varying vec2 vUv;
 
@@ -50,11 +50,13 @@ void main () {
 #### Data Types & Syntax
 Heres a list of different data types you can use:<br>
 `float` - a simple float value, e.g. 1.0<br>
-`int` - an integer, e.g. 1<br>
-`vec2` - a vector with 2 floats, e.g. vec2(x, y)<br>
-`vec3` - a vector with 3 floats, e.g. vec3(x, y, z) or vec3(r, g, b)<br>
-`vec4` - a vector with 4 floats, e.g. (r, g, b, a)<br>
+`int` - an integer, e.g. `1`<br>
+`vec2` - a vector with 2 floats, e.g. `vec2(x, y)`<br>
+`vec3` - a vector with 3 floats, e.g. `vec3(x, y, z)` or `vec3(r, g, b)`<br>
+`vec4` - a vector with 4 floats, e.g. `vec4(r, g, b, a)`<br>
 `sampler2D` - a special type which deals with texture/image sampling.
+
+These types are very strict, sometimes you may get errors because you've declared `float number = 1;` this will error because it is expecting `float number = 1.0;`
 
 A vector is simply a point in space, which is sometimes depicted using arrows. Because vectors usually have a direction. That is usually how you would calculate the distance from points. A vector is made up of at least 2 or more numbers. So a vertex is a point where two or more straight lines meet, like a corner. This value will be made up of 2 or 3 values (depending on 2D or 3D representation) and you can think of these as coordinates for where that vertex is.
 
@@ -67,5 +69,25 @@ vertex = vec2(x, y);
 ```js
 vertex = vec3(x, y, z);
 ```
-
+*example of vertex coordinates*
 <img src="../assets/webgl/vertex-example.png" width="400px"/>
+
+You can also access values from data you've created like so:
+```glsl
+const vec3 red = vec3(1.0, 0.0, 0.0);
+
+void main() {
+  gl_FragColor = vec4(red.r, red.g, red.b, 1.0);
+}
+```
+
+***Example of declaring colors***
+```glsl
+const vec3 red = vec3(1.0, 0.0, 0.0);
+const vec3 green = vec3(0.0, 1.0, 0.0);
+const vec3 blue = vec3(0.0, 0.0, 1.0);
+
+void main() {
+  gl_FragColor = vec4(green, 1.0);
+}
+```
