@@ -23,7 +23,7 @@ Now imagine a fragment like this:<br>
 A triangle – and it reads its three vertices which it is made up of. And now each pixel in the triangle needs to be drawn out. A fragment is the data provided by these 3 vertices in order to color the triangle. So if one vertex was red and another blue - you would get a gradient from red - purple - blue.
 
 *Example of what the shaders compute*
-<img src="../assets/webgl/basic-shder.png" width="450px"/>
+<img src="../assets/webgl/shader-example.png" width="450px"/>
 
 #### Shader Variables
 There are three declarations you can make using shaders.<br>
@@ -48,4 +48,24 @@ void main () {
 <img src="../assets/webgl/basic-shder.png" width="450px"/>
 
 #### Data Types & Syntax
-A vector is
+Heres a list of different data types you can use:<br>
+`float` - a simple float value, e.g. 1.0
+`int` - an integer, e.g. 1
+`vec2` - a vector with 2 floats, e.g. vec2(x, y)
+`vec3` - a vector with 3 floats, e.g. vec3(x, y, z) or vec3(r, g, b)
+`vec4` - a vector with 4 floats, e.g. (r, g, b, a)
+`sampler2D` - a special type which deals with texture/image sampling.
+
+A vector is simply a point in space, which is sometimes depicted using arrows. Because vectors usually have a direction. That is usually how you would calculate the distance from points. A vector is made up of at least 2 or more numbers. So a vertex is a point where two or more straight lines meet, like a corner. This value will be made up of 2 or 3 values (depending on 2D or 3D representation) and you can think of these as coordinates for where that vertex is.
+
+For example 2D coordinates would be:<br>
+```c
+vertex = vec2(x, y);
+```
+
+3D coordinants would be:<br>
+```c
+vertex = vec3(x, y, z);
+```
+
+<img src="../assets/webgl/vertex-example.png" width="450px"/>
