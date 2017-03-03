@@ -32,7 +32,7 @@ This is a collection of my notes from different things I've learnt while program
   - New techniques for responsive design
   - Working with Responsive Images
   - Lighthouse
-  - Service Workers
+  - [Service Workers](js/general/pwa.md#introduction-to-service-workers)
   - Working with Indexed DB
   - PWA automating tools
 
