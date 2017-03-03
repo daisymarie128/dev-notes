@@ -8,6 +8,7 @@ This is a collection of my notes from different things I've learnt while program
 - [HTML](#html)
 - [NPM](#npm)
 - [UNITY](#unity)
+- [Webpack](#webpack)
 - [Other](#other)
 
 
@@ -61,6 +62,7 @@ This is a collection of my notes from different things I've learnt while program
 - [commands](git/commands.md)
 
 ## HTML
+## Webpack
 
 ## Unity
 - [AR basics](unity/AR/basics.md)
