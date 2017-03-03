@@ -32,6 +32,15 @@ This is a collection of my notes from different things I've learnt while program
 
 
 
+## webGL
+#### threejs
+- [Basic Setup](webgl/threejs/basic-setup.md)
+- [Materials](webgl/threejs/materials.md)
+- [Loading objs](webgl/threejs/loaders/objloader.md)
+
+#### GLSL
+- [Shaders](webgl/shaders.md)
+
 ## CSS
 ### General
 
