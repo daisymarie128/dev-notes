@@ -22,6 +22,9 @@ Its one MUST do job is: set or discard the `gl_FragColor` variable, another 4D f
 Now imagine a fragment like this:<br>
 A triangle – and it reads its three vertices which it is made up of. And now each pixel in the triangle needs to be drawn out. A fragment is the data provided by these 3 vertices in order to color the triangle. So if one vertex was red and another blue - you would get a gradient from red - purple - blue.
 
+*Example of what the shaders compute*
+<img src="../assets/webgl/basic-shder.png" width="450px"/>
+
 #### Shader Variables
 There are three declarations you can make using shaders.<br>
 
@@ -41,4 +44,8 @@ void main () {
   gl_FragColor = vec4(vUv.xy, 1.0, 1.0);
 }
 ```
+*result:*
 <img src="../assets/webgl/basic-shder.png" width="450px"/>
+
+#### Data Types & Syntax
+A vector is
