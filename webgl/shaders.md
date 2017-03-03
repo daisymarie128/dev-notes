@@ -68,4 +68,4 @@ vertex = vec2(x, y);
 vertex = vec3(x, y, z);
 ```
 
-<img src="../assets/webgl/vertex-example.png" width="450px"/>
+<img src="../assets/webgl/vertex-example.png" width="200px"/>
