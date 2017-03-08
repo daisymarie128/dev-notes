@@ -23,20 +23,21 @@ After doing this make sure to run `npm install`
 Docs for these packages can be found here:
 // TODO: Get links
 - [Jasmine](https://jasmine.github.io)
-- [Selenium]
-- [WebdriverIO]
-- [WebdriverIO Jasmine]
-- [WebdriverIO Selenium Standalone Service]
-- [WebdriverIO Spec Reporter]
-- [WebdriverIO wbpack Service]
+- [Selenium](http://www.seleniumhq.org/)
+- [Selenium Standalone](https://github.com/vvo/selenium-standalone)
+- [WebdriverIO](http://webdriver.io/)
+- [WebdriverIO Jasmine](https://github.com/webdriverio/wdio-jasmine-framework)
+- [WebdriverIO Selenium Standalone Service](https://github.com/webdriverio/wdio-selenium-standalone-service)
+- [WebdriverIO Spec Reporter](https://github.com/webdriverio/wdio-spec-reporter)
+- [WebdriverIO webpack Service](http://webdriver.io/guide/services/webpack.html)
 - [BrowserStack](https://www.browserstack.com)
 - [WebdriverIO BrowserStack](https://github.com/itszero/wdio-browserstack-service)
 
-After you've installed all of those, you need to first setup Selenium
+After you've installed all of those, you need to first setup [Selenium](http://www.seleniumhq.org/)
 
 #### How to setup Selenium
 There are two different ways you can use selenium with your build the way I use it is standalone.<br>
-First install selenium-standalone globally
+First install [selenium-standalone](https://github.com/vvo/selenium-standalone) globally
 ```
 npm install selenium-standalone@latest -g
 ```
