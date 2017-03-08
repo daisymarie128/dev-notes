@@ -12,7 +12,7 @@ This course usually goes for three days, however we attended the course for two 
 - [x] [Auditing an existing site with Lighthouse (with lab)](#auditing-an-existing-site-with-lighthouse)<br>
 - [ ] [Using sw-toolbox and sw-precache to automate Service Worker creation (with lab)](#)<br>
 - [x] [Deeper dive into core technologies (Promises, Fetch API, Cache API)](#caching-and-return-requests)<br>
-- [ ] [Working with Indexed DB (with lab)](#)<br>
+- [ ] [Working with Indexed DB (with lab)](#indexeddb)<br>
 - [ ] [Building apps that cache live data in the service worker](#)<br>
 - [ ] [Discoverability & Analytics](#)<br>
 
