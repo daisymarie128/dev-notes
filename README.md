@@ -36,6 +36,12 @@ This is a collection of my notes from different things I've learnt while program
   - [Working with Indexed DB](js/general/pwa.md#indexeddb)
   - [PWA automating tools](js/general/pwa.md#using-sw-toolbox-and-sw-precache-to-automate-Service-Worker-creation)
 
+### Testing
+- [What is testing?](js/testing/testing.md)
+- [What are unit tests?](js/testing/unit-tests.md)
+- [Getting a project setup to do front-end testing](js/testing/settup.md)
+- [Basic jasmine.js usage](js/testing/jasmine.md)
+
 ### Patterns
 - [IIFE](js/patterns/iife.md)
 
