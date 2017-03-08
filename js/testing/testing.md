@@ -1,7 +1,7 @@
 ## Testing
 There are 3 different types of tests, all with different purposes but all should usually always be used in your project. It's better to split these tests up and organise and run them separately.
 
-#### Testing Types:
+### Testing Types:
 **Unit tests** <br>
 These tests ensure that individual components of the app work as expected. Assertions test the component API.
 
@@ -11,6 +11,7 @@ Integration tests ensure that component collaborations work as expected. Asserti
 **Functional tests** <br>
 Functional tests ensure that the app works as expected from the user’s perspective. Assertions primarily test the user interface.
 
+### Testing Stages:
 Tests are usually used at different stages of the project and supply different benefits.<br>
 **Development stage**<br>
 When writing tests during development help with developer feedback and also aid in writing cleaner code. Usually different tests will be run separately at this stage.
