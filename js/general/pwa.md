@@ -207,7 +207,7 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
     .then(function (cache) {
-      //...
+      return cache.addAll(filesToCache);
     })
   );
 });
