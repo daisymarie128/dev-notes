@@ -56,6 +56,12 @@ This is a collection of my notes from different things I've learnt while program
 #### GLSL
 - [Shaders](webgl/shaders.md)
 
+## Canvas
+- [Drawing images](canvas/draw-image.md)
+- [Drawing parts of an image](canvas/draw-section-image.md)
+- [Drawing Shapes References](canvas/shapes.md)
+- [Gradients](canvas/gradients.md)
+
 ## CSS
 ### General
 
