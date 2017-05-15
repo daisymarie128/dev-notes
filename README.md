@@ -3,6 +3,8 @@ This is a collection of my notes from different things I've learnt while program
 
 ## CATEGORIES
 - [Javascript](#javascript)
+- [WebGL](#webgl)
+- [Canvas](#canvas)
 - [CSS](#css)
 - [GIT](#git)
 - [HTML](#html)
