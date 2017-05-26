@@ -16,7 +16,7 @@ So this means that for markup like this:
 ```
 
 This style would work:
-```scss
+```css
 #container {
     .conatiner__section {
         width: 100px;
@@ -71,3 +71,4 @@ div:not(.outer) p {
   </div>
 </div>
 ```
+
