@@ -27,6 +27,8 @@ This is a collection of my notes from different things I've learnt while program
 - [Reducer](js/frameworks-libraries/redux/reducer.md)
 
 ### General
+- [Helpful tools when working with arrays](js/general/arrays.md)
+- [If, Switch and Array lookup performance and when to use](js/general/ifelse-switch.md)
 - [scrolling](js/general/scrolling.md)
 - [Progressive Web Apps](js/general/pwa.md)<br>
   *This contains information on:*
