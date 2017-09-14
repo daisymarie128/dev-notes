@@ -32,12 +32,18 @@ if (value == 0){
 }
 ```
 <br>
-This is beacause if the value happens to equal 9, it will have to check all the other statements before getting to the correct value.<br>
-So the deeper the statement gets, more conditions have to be evaluated.<br>
+This is beacause if the value happens to equal 9, it will have to check all the other statements before getting to the correct value.
+<br>
 
-There are ways however, to increase the performance of this, by writting your statement perhaps with a binary search algorithm. <br>
+So the deeper the statement gets, more conditions have to be evaluated.
+<br>
+
+There are ways however, to increase the performance of this, by writting your statement perhaps with a binary search algorithm.
+<br>
+
 The aim of writting it this way is to try and evaluate as little conditions, for as many of the conditions as possible.
 <br>
+
 **Here's an example:**
 ```js
 if (value < 6){
