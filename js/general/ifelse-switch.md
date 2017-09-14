@@ -79,13 +79,17 @@ if (value < 6){
 }
 ```
 <br>
+
 This technically is written over more lines, however when evaluating these conditions it is able to skip over goups at a time, speeding it up.
 <br>
+
 However, the problem remains that each additional condition ends up taking more time to execute, affecting not only the performance but also the maintainability of this code.<br>
-This is where the **switch statement** comes in.
+This is where the ***switch statement*** comes in.
 
 ### switch statement
-A switch case is not only handy because it simplifies the performance of some conditions but also because it simplifies the appearance of the code.<br>
+A switch case is not only handy because it simplifies the performance of some conditions but also because it simplifies the appearance of the code.
+<br>
+
 This is an exmaple of our first if statement we wrote but instead, using a switch statement.<br>
 ```js
 switch(value){
@@ -115,14 +119,24 @@ switch(value){
 ```
 
 <br>
-In other programming languages the switch statement is always said to be the better option and this is because of how compilers are able to optimize them not the actual switch itself.<br>
-But however because in javascript, different browsers, run different engines the switch statement varies in performance.<br>
-For exmaple Firefox handles them really well, but Chrome, Safari, Opera and IE all show increases in the execution time as you get deeper into the switch statement.<br>
-*However* those increases are smaller than the increases you would see with each additional condition of an if statement.<br>
+In other programming languages the switch statement is always said to be the better option and this is because of how compilers are able to optimize them not the actual switch itself.
+<br>
+
+But however because in javascript, different browsers, run different engines the switch statement varies in performance.
+<br>
+
+For exmaple Firefox handles them really well, but Chrome, Safari, Opera and IE all show increases in the execution time as you get deeper into the switch statement.
+<br>
+
+*However* those increases are smaller than the increases you would see with each additional condition of an if statement.
+<br>
 
 ## But which is better? 
 In JavaScript, if statements are generally faster than switch statements ***WHEN*** there are just one or two conditions to be evaluated.<br>
-When there are more than two conditions, ***AND*** the conditions are simple ***(not ranges)***, the switch statement seems to be faster.<br><br>
+
+When there are more than two conditions, ***AND*** the conditions are simple ***(not ranges)***, the switch statement seems to be faster.
+<br>
+
 This is because the amount of time it takes to execute a single condition in a switch statement is often less than it takes to execute a single condition in an if statement, making the switch statement better only when there are a larger number of conditions.
 
 ## Array look ups
@@ -135,8 +149,12 @@ return results[value];
 ```
 
 <br>
-This way works by storing all the values in an array which is the value is mapped to the index.<br>
-So to retrieve the correct result you simply supply the value to the array to look up.<br>
+This way works by storing all the values in an array which is the value is mapped to the index.
+<br>
+
+So to retrieve the correct result you simply supply the value to the array to look up.
+<br>
+
 This should only be used for large sets of data, as for small sets it is slower to look up an array than it is to evaluate an `if` statement.
 
 ## Best times to use each:
