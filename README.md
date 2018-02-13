@@ -90,3 +90,6 @@ This is a collection of my notes from different things I've learnt while program
 
 ## Other
 - [blender](other/blender.md)
+- [ffmpeg](other/ffmpeg.md)
+- [Collision Detection](other/collision-detection.md)
+- [Layout / Reflow](other/layout-reflow.md)
