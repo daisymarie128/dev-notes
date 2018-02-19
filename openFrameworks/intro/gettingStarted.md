@@ -1,4 +1,4 @@
-## Getting started with openFrameworks
+# Getting started with openFrameworks
 
 Download openFrameworks for appropriate os [here](http://openframeworks.cc/download/).<br>
 For me I'll use osx.<br>
@@ -8,19 +8,26 @@ Next you need to get Xcode setup correctly<br>
 Follow this step by step guide if you don't already have Xcode installed: [setup guide](http://openframeworks.cc/setup/xcode/)
 
 
-### How to setup your first project
+## How to setup your first project
 
 
 
 ### Files:
-#### ofApp.cpp
-
 
 #### ofApp.h
--- type declaration
+This is the `Header` file. In here is where you will declare and define objects and types for you program to use. 
 
-#### main.cpp
+#### ofApp.cpp
+This is where all the logic and main functions of your App are kept.
 
+#### Functions:
+##### setup()
+The setup method is called only once at the beginning of the application. It's used to initialize other objects or variables which are usually declared in ofApp.h.
+
+##### update/draw()
+Update and draw are called in an infinite loop one after another in that order, until we finish the application.
+
+The `update` function is where you will do calculations and updates to states. 
 
 ### How to render text to screen:
 ### How to debug
