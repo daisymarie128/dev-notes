@@ -1,4 +1,4 @@
-#How to make a drawing app
+# How to make a drawing app
 First generate a new project as explained in the getting started section.
 <br>
 
