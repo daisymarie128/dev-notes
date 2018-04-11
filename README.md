@@ -8,6 +8,8 @@ This is a collection of my notes from different things I've learnt while program
 - [CSS](#css)
 - [GIT](#git)
 - [HTML](#html)
+- [Machine Learning](#machine-learning)
+- [Mathamatics](#mathamatics)
 - [NPM](#npm)
 - [UNITY](#unity)
 - [Webpack](#webpack)
@@ -84,6 +86,14 @@ This is a collection of my notes from different things I've learnt while program
 ## Unity
 - [AR basics](unity/AR/basics.md)
 
+## Machine Learning
+- [Introduction](mahcine-learning/intro.md)
+- [General Tearm](mahcine-learning/general-terms.md)
+- [Key Tearm](mahcine-learning/key-terms.md)
+- [Choosing Data](mahcine-learning/choosing-data.md)
+
+## Mathamatics
+- [Terminology](mathamatics/terminology.md)
 
 ## NPM
 - [commands](npm/commands.md)
