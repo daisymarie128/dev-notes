@@ -28,6 +28,9 @@ This is a collection of my notes from different things I've learnt while program
 - [General Notes](js/frameworks-libraries/redux/general-notes.md)
 - [Reducer](js/frameworks-libraries/redux/reducer.md)
 
+### TensorFlow
+- [key-terms](js/frameworks-libraries/tensorflowjs/key-terms.md)
+
 ### General
 - [Helpful tools when working with arrays](js/general/arrays.md)
 - [If, Switch and Array lookup performance and when to use](js/general/ifelse-switch.md)
