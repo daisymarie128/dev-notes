@@ -33,7 +33,7 @@ So this is simply describing a *tensor* as a mathematical object which refers to
 
 For example, a linear map is represented by a matrix (a 2-dimensional array), and therefore is a 2nd-order tensor. A vector is represented as a 1-dimensional array, and is a 1st-order tensor. [Scalars]('../../../mathamatics/terminology.md#scalars') are single numbers and are thus 0th-order tensors.
 
-Here is a example of what a *tensor* could look like:
+Here is a example of what a *tensor* could look like:<br>
 <img src="../../../assets/machine-learning/tensor-diagram.png" width="450px"/>
 
 A very very simply way to look at it is, the dimension of the tensor is called its rank. So a two dimentional tensor would equal to being a rank-2 tensor. Where as a three dimentional tensor would be a rank-3 tensor and so forth.
