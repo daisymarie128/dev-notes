@@ -1,13 +1,14 @@
-# DEV NOTES
+# Dev Notes
 This is a collection of my notes from different things I've learnt while programming.
 
-## CATEGORIES
+## Categories
 - [Javascript](#javascript)
 - [WebGL](#webgl)
 - [Canvas](#canvas)
 - [CSS](#css)
 - [GIT](#git)
 - [HTML](#html)
+- [Pug](#pug)
 - [Machine Learning](#machine-learning)
 - [Mathamatics](#mathamatics)
 - [NPM](#npm)
@@ -15,6 +16,7 @@ This is a collection of my notes from different things I've learnt while program
 - [Webpack](#webpack)
 - [Vim](#vim)
 - [Terminal](#terminal)
+- [AWS](#aws)
 - [Other](#other)
 
 
@@ -75,16 +77,23 @@ This is a collection of my notes from different things I've learnt while program
 
 ## CSS
 ### General
+- [BEM](css/BEM/overview.md)
+  - [rules](css/general/bem-rules.md)
+- [Specificity](css/general/specificity.md)
+- [z-index](css/general/z-index.md)
 
 ### Mobile
 - [mobile tap color](css/mobile/mobile-tap-color.md)
 - [scrolling](css/mobile/scrolling.md)
 - [visibility](css/mobile/visibility.md)
+- [Transitions with ios flash](css/mobile/transitions-ios-flash.md)
 
 ## GIT
 - [commands](git/commands.md)
 
 ## HTML
+## Pug
+- [Includes](pug/includes.md)
 ## Webpack
 - [Basic Setup](webpack/basic-setup.md)
 
@@ -103,12 +112,21 @@ This is a collection of my notes from different things I've learnt while program
 ## NPM
 - [commands](npm/commands.md)
 
+## OpenFramworks
+- [Intro](openframeworks/introduction.md)
+- [Getting started](openframeworks/intro/gettingStarted.md)
+- [drawing-tutorial](openframeworks/drawing-tutorial.md)
+- [osc](openframeworks/osc.md)
+
 ## Vim
 - [Moving the cursor](vim/moving-cursor.md)
 - [Deleting](vim/deleting.md)
 
 ## Terminal
 - [Commands](commands.md)
+
+## AWS
+- [Basic commands](aws/basic-commands.md)
 
 ## Other
 - [blender](other/blender.md)
