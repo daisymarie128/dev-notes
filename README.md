@@ -13,6 +13,8 @@ This is a collection of my notes from different things I've learnt while program
 - [NPM](#npm)
 - [UNITY](#unity)
 - [Webpack](#webpack)
+- [Vim](#vim)
+- [Terminal](#terminal)
 - [Other](#other)
 
 
@@ -100,6 +102,13 @@ This is a collection of my notes from different things I've learnt while program
 
 ## NPM
 - [commands](npm/commands.md)
+
+## Vim
+- [Moving the cursor](vim/moving-cursor.md)
+- [Deleting](vim/deleting.md)
+
+## Terminal
+- [Commands](commands.md)
 
 ## Other
 - [blender](other/blender.md)
