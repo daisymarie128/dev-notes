@@ -122,6 +122,14 @@ This is a collection of my notes from different things I've learnt while program
 ## Vim
 - [Moving the cursor](vim/moving-cursor.md)
 - [Deleting](vim/deleting.md)
+- [Copying and Pasting](vim/copy-pasting.d)
+	- copying/yanking
+	- cutting
+	- pasting
+	- editing files
+- [Searching](vim/searching.md)
+	- Searching in directions
+	- Highlighting
 
 ## Terminal
 - [Commands](commands.md)
