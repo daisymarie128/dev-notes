@@ -11,7 +11,7 @@ This is a collection of my notes from different things I've learnt while program
 - [Pug](#pug)
 - [Machine Learning](#machine-learning)
 - [Mathamatics](#mathamatics)
-- [NPM](#npm)
+- [NPM / Yarn](#npm-yarn)
 - [UNITY](#unity)
 - [Webpack](#webpack)
 - [Vim](#vim)
@@ -110,7 +110,8 @@ This is a collection of my notes from different things I've learnt while program
 - [Terminology](mathamatics/terminology.md)
 
 ## NPM
-- [commands](npm/commands.md)
+- [commands](npm-yarn/commands.md)
+- [yarn dependicy package versions and how there handled](npm-yarn/yarn-updating-packages.md)
 
 ## OpenFramworks
 - [Intro](openframeworks/introduction.md)
